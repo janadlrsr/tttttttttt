@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="faqs.css">
+    <title>Landing Page | FAQS</title>
+</head>
+<body>
+    
+    
+    
+    <div class="logo">
+        <img src="img/bcare.png" alt="logo">
+        <i class="fa fa-bars" onclick="toggleFunction()" aria-hidden="true"></i>
+
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="">FAQS</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="login_client.html">LOG IN</a></li>
+            </ul>
+        </div>
+        <ul class="navbar">
+            <li><a href="home.html">HOME</a></li>
+            <li class="focus"><a href="">FAQS</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="login_client.html">LOG IN</a></li>
+        </ul>
+
+    </div>
+
+     <div class="textArea">    
+        
+        <div class="accordion"><img src="img/icon.png" width="50px">When should the first newborn care visit happen?</div>
+        <div class="panel">
+        <p>The first newborn care visit with the pediatrician happens early, 
+            <br>usually within 2 to 5 days of birth. This visit can happen while 
+               you are both still in the hospital.</p>              
+        </div> 
+        
+        <div class="accordion"><img src="img/icon.png" width="50px">What about feeding my newborn?</div>
+        <div class="panel">
+        <p> Newborn babies will want to feed every 2 to 3 hours if you are breastfeeding.
+          <br> Formula fed newborns will want to feed every 3 to 4 hours.</p>              
+        </div> 
+
+        <div class="accordion"><img src="img/icon.png" width="50px">When can I start introducing solid foods to my baby?</div>
+        <div class="panel">
+        <p>Most pediatricians recommend introducing solid foods around 6 months of age.</p>              
+        </div> 
+
+     </div>
+
+
+
+     <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        } 
+        </script>
+
+        <script>
+             
+        function toggleFunction(){
+           let togglebtn = document.getElementById("mobile-nav");
+           togglebtn.classList.toggle("toggle");
+            console.log("click");
+        }
+        </script>
+</body>
+</html>
